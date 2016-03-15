@@ -487,6 +487,7 @@ typedef unsigned smalluint;
 #endif
 
 #if defined(ANDROID) || defined(__ANDROID__)
+# define getmntent bb_getmntent
 # if __ANDROID_API__ < 8
 #  undef HAVE_DPRINTF
 # else

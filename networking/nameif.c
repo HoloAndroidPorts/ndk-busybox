@@ -43,6 +43,7 @@
 //applet:IF_NAMEIF(APPLET(nameif, BB_DIR_SBIN, BB_SUID_DROP))
 
 //kbuild:lib-$(CONFIG_NAMEIF) += nameif.o
+//kbuild:lib-$(CONFIG_NAMEIF) += ether_aton_r.o
 
 //usage:#define nameif_trivial_usage
 //usage:	IF_NOT_FEATURE_NAMEIF_EXTENDED(

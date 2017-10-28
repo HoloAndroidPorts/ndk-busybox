@@ -113,7 +113,7 @@
  * (-DFAST_FUNC= )
  */
 #ifndef FAST_FUNC
-# if __GNUC_PREREQ(3,0) && defined(i386)
+# if __GNUC_PREREQ(3,0) && defined(i386) || defined(i386) && defined(ANDROID) || defined (__ANDROID__) && __ANDROID_API__ >= 21
 /* stdcall makes callee to pop arguments from stack, not caller */
 #  define FAST_FUNC __attribute__((regparm(3),stdcall))
 /* #elif ... - add your favorite arch today! */
@@ -503,7 +503,6 @@ typedef unsigned smalluint;
 #  undef HAVE_TTYNAME_R
 #  undef HAVE_GETLINE
 #  undef HAVE_STPCPY
-# else
 #  undef HAVE_WAIT3
 # endif
 # undef HAVE_MEMPCPY

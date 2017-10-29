@@ -488,11 +488,7 @@ typedef unsigned smalluint;
 
 #if defined(ANDROID) || defined(__ANDROID__)
 # if __ANDROID_API__ < 8
-   /* ANDROID < 8 has no [f]dprintf at all */
 #  undef HAVE_DPRINTF
-# elif __ANDROID_API__ < 21
-   /* ANDROID < 21 has fdprintf */
-#  define dprintf fdprintf
 # else
    /* ANDROID >= 21 has standard dprintf */
 # endif

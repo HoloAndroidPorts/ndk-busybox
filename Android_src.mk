@@ -342,6 +342,7 @@ networking/arp.c \
 networking/arping.c \
 networking/brctl.c \
 networking/dnsd.c \
+networking/ether_aton_r.c \
 networking/ether-wake.c \
 networking/ftpd.c \
 networking/ftpgetput.c \
